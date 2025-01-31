@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hi I'm Danndifadila</h1>
+      <p>A Junior Front-End Developer</p>
+    </header>
+
+    <main>
+      <article>
+        <img src="assets/self_photo.jpg" alt="Placeholder Image" />
+        <h2>Tentang Saya</h2>
+        <br>
+        <p>
+          Hi! My name is Danndifadila, I'm a Front-End Developer from Indonesia.
+          Im currently learn Html, Css, and Javascript. I'm also an Anime
+          Enthusiast. My favorite anime of all time is Code Geass.
+        </p>
+      </article>
+
+      <aside>
+        <div class="slider">
+          <div class="slides">
+            <p>Gambar Slider</p>
+            <img src="assets/foto_bali.JPG" alt="Slide 1" />
+            <img src="assets/self_photo.jpg" alt="Slide 2" />
+          </div>
+        </div>
+        <h2>Kontak Saya</h2>
+        <br>
+        <form>
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea rows="4" placeholder="Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </aside>
+    </main>
+
+    <!-- Script untuk gambar slice -->
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slides img");
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.display = i === index ? "block" : "none";
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      setInterval(nextSlide, 3000);
+      showSlide(currentSlide);
+    </script>
+
+    <footer>
+      <p>&copy Copyright Danndifadila 2025</p>
+    </footer>
+  </body>
+</html>
