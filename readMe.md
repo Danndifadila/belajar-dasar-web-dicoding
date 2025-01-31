@@ -4,7 +4,7 @@ Saya membuat website simpel dengan layout grid dan flex. Menggunakan Javascript 
 
 ## Preview Website
 
-![alt text](image.png)
+![alt text](assets/image.png)
 
 
 
